@@ -1,0 +1,81 @@
+root - INFO - ------------ISS Postion------------
+urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): api.open-notify.org:80
+urllib3.connectionpool - DEBUG - http://api.open-notify.org:80 "GET /iss-now.json HTTP/1.1" 200 114
+root - DEBUG - Status: 200
+root - DEBUG - Response: {
+    "iss_position": {
+        "latitude": "-15.7430",
+        "longitude": "176.5082"
+    },
+    "message": "success",
+    "timestamp": 1603425500
+}
+root - INFO - 
+Time: 2020-10-22 20:58:20
+	Latitude: -15.7430
+	Longitude: 176.5082
+root - INFO - ------------ISS Overhead------------
+urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): api.open-notify.org:80
+urllib3.connectionpool - DEBUG - http://api.open-notify.org:80 "GET /iss-pass.json?lat=32.2123&lon=-110.879&alt=1&n=4 HTTP/1.1" 200 457
+root - DEBUG - Status: 200
+root - DEBUG - Response: {
+    "message": "success",
+    "request": {
+        "altitude": 1.0,
+        "datetime": 1603423924,
+        "latitude": 32.2123,
+        "longitude": -110.879,
+        "passes": 4
+    },
+    "response": [
+        {
+            "duration": 553,
+            "risetime": 1603450506
+        },
+        {
+            "duration": 641,
+            "risetime": 1603456252
+        },
+        {
+            "duration": 456,
+            "risetime": 1603462197
+        },
+        {
+            "duration": 191,
+            "risetime": 1603468240
+        }
+    ]
+}
+root - DEBUG - Time: 2020-10-23 03:55:06
+root - INFO - The ISS will pass overhead on 2020-10-23 at 03:55:06
+root - DEBUG - Time: 2020-10-23 05:30:52
+root - INFO - The ISS will pass overhead on 2020-10-23 at 05:30:52
+root - DEBUG - Time: 2020-10-23 07:09:57
+root - INFO - The ISS will pass overhead on 2020-10-23 at 07:09:57
+root - DEBUG - Time: 2020-10-23 08:50:40
+root - INFO - The ISS will pass overhead on 2020-10-23 at 08:50:40
+root - INFO - ------------Astronauts in space------------
+urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): api.open-notify.org:80
+urllib3.connectionpool - DEBUG - http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 183
+root - DEBUG - Status: 200
+root - DEBUG - {
+    "message": "success",
+    "number": 3,
+    "people": [
+        {
+            "craft": "ISS",
+            "name": "Sergey Ryzhikov"
+        },
+        {
+            "craft": "ISS",
+            "name": "Kate Rubins"
+        },
+        {
+            "craft": "ISS",
+            "name": "Sergey Kud-Sverchkov"
+        }
+    ]
+}
+root - INFO - Sergey Ryzhikov is currently in space aboard the ISS
+root - INFO - Kate Rubins is currently in space aboard the ISS
+root - INFO - Sergey Kud-Sverchkov is currently in space aboard the ISS
